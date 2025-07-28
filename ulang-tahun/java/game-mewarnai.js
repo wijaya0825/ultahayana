@@ -115,6 +115,41 @@ document.addEventListener('DOMContentLoaded', function() {
       canvas.addEventListener('mouseup', () => { isDrawing = false; });
       canvas.addEventListener('mouseout', () => { isDrawing = false; });
 
+      // Event untuk sentuhan (touch) agar layar tidak tergeser saat menggambar di HP
+      canvas.addEventListener('touchstart', function(e) {
+        if (e.touches.length > 0) {
+          const rect = canvas.getBoundingClientRect();
+          const touch = e.touches[0];
+          const x = (touch.clientX - rect.left);
+          const y = (touch.clientY - rect.top);
+          isDrawing = true;
+          lastX = x;
+          lastY = y;
+        }
+        e.preventDefault();
+      }, { passive: false });
+
+      canvas.addEventListener('touchmove', function(e) {
+        if (!isDrawing) return;
+        if (e.touches.length > 0) {
+          const rect = canvas.getBoundingClientRect();
+          const touch = e.touches[0];
+          // Buat event tiruan agar fungsi draw bisa dipakai
+          const fakeEvent = {
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            preventDefault: function() {}
+          };
+          draw(fakeEvent);
+        }
+        e.preventDefault();
+      }, { passive: false });
+
+      canvas.addEventListener('touchend', function(e) {
+        isDrawing = false;
+        e.preventDefault();
+      }, { passive: false });
+
       // Pilih warna
       colors.forEach(color => {
         color.addEventListener('click', function() {
