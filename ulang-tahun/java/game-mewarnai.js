@@ -72,31 +72,38 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Fungsi menggambar
-      function draw(e) {
-        if (!isDrawing) return;
-        const rect = canvas.getBoundingClientRect();
-        const x = (e.clientX - rect.left);
-        const y = (e.clientY - rect.top);
-        const colorCtx = coloredLayer.getContext('2d');
-        colorCtx.lineJoin = 'round';
-        colorCtx.lineCap = 'round';
-        if (isErasing) {
-          // Hapus hanya di coloredLayer
-          colorCtx.globalCompositeOperation = 'destination-out';
-        } else {
-          colorCtx.globalCompositeOperation = 'source-over';
-          colorCtx.strokeStyle = currentColor;
-          colorCtx.fillStyle = currentColor;
-        }
-        colorCtx.lineWidth = currentSize;
-        colorCtx.beginPath();
-        colorCtx.moveTo(lastX, lastY);
-        colorCtx.lineTo(x, y);
-        colorCtx.stroke();
-        lastX = x;
-        lastY = y;
-        drawLayers();
-      }
+function draw(e) {
+  if (!isDrawing) return;
+  const rect = canvas.getBoundingClientRect();
+  let x, y;
+  if (e.touches && e.touches.length > 0) {
+    // Touch event
+    x = e.touches[0].clientX - rect.left;
+    y = e.touches[0].clientY - rect.top;
+  } else {
+    // Mouse event
+    x = e.clientX - rect.left;
+    y = e.clientY - rect.top;
+  }
+  const colorCtx = coloredLayer.getContext('2d');
+  colorCtx.lineJoin = 'round';
+  colorCtx.lineCap = 'round';
+  if (isErasing) {
+    colorCtx.globalCompositeOperation = 'destination-out';
+  } else {
+    colorCtx.globalCompositeOperation = 'source-over';
+    colorCtx.strokeStyle = currentColor;
+    colorCtx.fillStyle = currentColor;
+  }
+  colorCtx.lineWidth = currentSize;
+  colorCtx.beginPath();
+  colorCtx.moveTo(lastX, lastY);
+  colorCtx.lineTo(x, y);
+  colorCtx.stroke();
+  lastX = x;
+  lastY = y;
+  drawLayers();
+}
 
       // Event listeners untuk menggambar saja
       canvas.addEventListener('mousedown', (e) => {
@@ -130,18 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, { passive: false });
 
       canvas.addEventListener('touchmove', function(e) {
-        if (!isDrawing) return;
-        if (e.touches.length > 0) {
-          const rect = canvas.getBoundingClientRect();
-          const touch = e.touches[0];
-          // Buat event tiruan agar fungsi draw bisa dipakai
-          const fakeEvent = {
-            clientX: touch.clientX,
-            clientY: touch.clientY,
-            preventDefault: function() {}
-          };
-          draw(fakeEvent);
-        }
+        draw(e);
         e.preventDefault();
       }, { passive: false });
 
