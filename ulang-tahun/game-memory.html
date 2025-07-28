@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Memori Kartu</title>
+    <link rel="stylesheet" href="css/game-memory.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Gallery/card.png">
+</head>
+<body>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">🌟</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">🌟</div>
+
+    <div class="cloud">☁️</div>
+    <div class="cloud">☁️</div>
+    <div class="cloud">☁️</div>
+    <div class="cloud">☁️</div>
+
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+
+    <div class="flower">🌸</div>
+    <div class="flower">🌺</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌺</div>
+
+    <div class="sun">☀️</div>
+
+    <div class="game-container">
+        <h1>🎮 Permainan Memori Kartu 🎮</h1>
+        
+        <div class="game-info">
+            <div class="info-box">
+                <h3>⏰ Waktu</h3>
+                <span id="timer">00:00</span>
+            </div>
+            <div class="info-box">
+                <h3>🎯 Gerakan</h3>
+                <span id="moves">0</span>
+            </div>
+            <div class="info-box">
+                <h3>✨ Pasangan</h3>
+                <span id="matches">0/8</span>
+            </div>
+        </div>
+
+        <button id="startBtn" class="start-button">🚀 Mulai Permainan</button>
+
+        <div id="gameBoard" class="game-board hidden"></div>
+    </div>
+
+    <div id="congratulations" class="congratulations">
+        <h2>Selamat</h2>
+        <p>Kamu berhasil menyelesaikan permainan!</p>
+        <p id="finalStats"></p>
+        <button id="closeBtn" class="close-btn">Tutup</button>
+    </div>
+
+    <script src="java/game-memory.js"></script>
+</body>
+</html>

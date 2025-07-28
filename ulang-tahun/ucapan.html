@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Selamat Ulang Tahun, Ayana! 🎂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/ucapan.css">
+<link rel="icon" type="image/png" sizes="16x16" href="Gallery/birthday_16104666.gif">
+</head>
+<body>
+    <header>
+        <h1>Selamat Ulang Tahun, Ayana! 🎉</h1>
+        <p class="age">Hari ini kamu genap berusia 1 tahun!</p>
+    </header>
+
+    <div id="balloons"></div>
+
+
+    <div style="text-align:center;margin-bottom:10px;">
+        <span style="font-size:3.5rem;display:inline-block;animation:bounce 1.2s infinite alternate;">🎂</span>
+    </div>
+
+    <div class="cards-container" id="cardsContainer"></div>
+
+    <div class="add-message">
+        <h2>Tulis Ucapan Spesialmu 🎈</h2>
+        <form id="formUcapan">
+            <input type="text" id="namaPengirim" placeholder="Nama Anda" maxlength="20" required><br>
+            <textarea id="isiUcapan" placeholder="Tulis ucapan untuk ayana di sini..." maxlength="300" required></textarea><br>
+            <button type="submit">Kirim Ucapan</button>
+        </form>
+    </div>
+
+    <footer>
+        Dibuat untuk Ayana yang berusia 1 tahun.
+    </footer>
+    <br>
+    <br>
+    <br>
+    <audio id="bg-music" src="song/Selamat Ulang Tahun Ayana (1).mp3" loop autoplay></audio>
+    <div id="music-controls" style="position:fixed;bottom:20px;right:20px;z-index:1000;background:rgba(255,255,255,0.8);border-radius:8px;padding:8px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;align-items:center;gap:10px;">
+        <button id="music-toggle" style="font-size:18px;">⏸️</button>
+        <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" style="width:80px;">
+    </div>
+
+    <script src="java/song.js"></script>
+    <script src="java/ucapan.js"></script>
+
+</body>
+</html>

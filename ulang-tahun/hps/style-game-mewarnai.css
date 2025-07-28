@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+h1 {
+  color: #ff69b4;
+}
+
+.toolbar {
+  margin-bottom: 15px;
+  background-color: #fff3f8;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  border: 2px solid #ccc;
+  background-color: white;
+  cursor: crosshair;
+  border-radius: 10px;
+}

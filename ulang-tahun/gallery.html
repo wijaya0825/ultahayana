@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galeri Kenangan - Ulang Tahun</title>
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="icon" type="image/png" sizes="16x16" href="Gallery/birthday_16104666.gif">
+</head>
+<body>
+
+<h1>🎂 Galeri Kenangan 🎂</h1>
+
+<div class="gallery">
+  <div class="card" data-desc="Momen Ayana yang terkejut, dengan ekspresi polosnya yang menggemaskan.">
+    <img src="Gallery/ayana l 1.jpeg" alt="Foto 1">
+  </div>
+
+  <div class="card" data-desc="Momen bermain Ayana di taman dan menikmati rumput hijau yang lembut.">
+    <img src="Gallery/ayana 1.jpeg" alt="Foto 2">
+  </div>
+
+  <div class="card" data-desc="Momen Ayana, makan bersama keluarga.">
+    <img src="Gallery/ayana 3.jpeg" alt="Foto 3">
+  </div>
+
+  <div class="card" data-desc="momen ayana, menikmati suasana taman.">
+    <img src="Gallery/ayana 4.jpeg" alt="Foto 4">
+  </div>
+
+  <div class="card" data-desc="Momen ayana, melakukan Ekspresi lucu 😂">
+    <img src="Gallery/ayana 5.jpeg" alt="Foto 4">
+  </div>
+
+  <div class="card" data-desc="Momen Ayana lagi santai di sore hari 😎">
+    <img src="Gallery/ayana 6.jpeg" alt="Foto 4">
+  </div>
+</div>
+
+<div id="overlay">
+  <img id="largeImg" src="" alt="Large">
+  <div id="desc" class="desc"></div>
+</div>
+<audio id="bg-music" src="song/Selamat Ulang Tahun Ayana (1).mp3" loop autoplay></audio>
+  <div id="music-controls" style="position:fixed;bottom:20px;right:20px;z-index:1000;background:rgba(255,255,255,0.8);border-radius:8px;padding:8px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;align-items:center;gap:10px;">
+      <button id="music-toggle" style="font-size:18px;">⏸️</button>
+      <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" style="width:80px;">
+  </div>
+
+<script src="java/song.js"></script>
+<script src="java/gallery.js"></script>
+</body>
+</html>

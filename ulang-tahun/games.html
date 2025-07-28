@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Seru - Ulang Tahun</title>
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Gallery/birthday_16104666.gif">
+</head>
+<body>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
+    <div class="container">
+        <h1 class="main-title">🎉 Games Seru! 🎉</h1>
+        <p class="subtitle">Mari rayakan hari istimewa dengan permainan yang seru, mengasah otak dan melatih kreaktivitas!</p>
+        
+        <div class="games-grid">
+            <div class="game-card" onclick="window.location.href='game-mewarnai.html'">
+                <div class="special-badge">✨ Populer</div>
+                <span class="game-icon">🎨</span>
+                <h3 class="game-title">Game Mewarnai</h3>
+                <p class="game-description">Mainkan game seru dan dapatkan kesenangan di hari spesialmu! Warnai gambar favoritmu dengan kreativitas tanpa batas.</p>
+                <button class="play-button">Mulai Main</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='game-balloon-pop.html'">
+                <span class="game-icon">🎈</span>
+                <h3 class="game-title">Game Balon POP</h3>
+                <p class="game-description">Mainkan game seru dan dapatkan kesenangan di hari spesialmu! Pecahkan balon untuk mendapat hadiah surprise.</p>
+                <button class="play-button">Mulai Main</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='game-memory.html'">
+                <span class="game-icon">🧩</span>
+                <h3 class="game-title">Memory Game</h3>
+                <p class="game-description">Mainkan game seru dan dapatkan kesenangan di hari spesialmu! Asah memorimu dengan kartu-kartu lucu.</p>
+                <button class="play-button">Mulai Main</button>
+            </div>
+        </div>
+    </div>
+    <audio id="bg-music" src="song/Selamat Ulang Tahun Ayana (1).mp3" loop autoplay></audio>
+    <div id="music-controls" style="position:fixed;bottom:20px;right:20px;z-index:1000;background:rgba(255,255,255,0.8);border-radius:8px;padding:8px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;align-items:center;gap:10px;">
+        <button id="music-toggle" style="font-size:18px;">⏸️</button>
+        <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" style="width:80px;">
+    </div>
+    
+    <script src="java/song.js"></script>
+    <script src="java/games.js"></script>
+</body>
+</html>

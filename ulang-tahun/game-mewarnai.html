@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Mewarnai</title>
+  <link rel="stylesheet" href="css/game-mewarnai.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="Gallery/color-palette.png">
+</head>
+<body>
+  <body>
+  <div class="coloring-game">
+    <h2>Game Mewarnai</h2>
+    <p>Pilih gambar dan warna untuk mewarnai!</p>
+    
+    <div class="tools-section">
+      <div class="tool-panel">
+        <div class="panel-title">Palet Warna</div>
+        <div class="color-scroll">
+          <div class="color-palette">
+            <div class="color" style="background-color: #ff0000" data-color="#ff0000" title="Merah"></div>
+            <div class="color" style="background-color: #ff4500" data-color="#ff4500" title="Merah Oranye"></div>
+            <div class="color" style="background-color: #ff9900" data-color="#ff9900" title="Oranye"></div>
+            <div class="color" style="background-color: #ffd700" data-color="#ffd700" title="Kuning Emas"></div>
+            <div class="color" style="background-color: #ffff00" data-color="#ffff00" title="Kuning"></div>
+            <div class="color" style="background-color: #9acd32" data-color="#9acd32" title="Kuning Hijau"></div>
+            <div class="color" style="background-color: #33cc33" data-color="#33cc33" title="Hijau"></div>
+            <div class="color" style="background-color: #008000" data-color="#008000" title="Hijau Gelap"></div>
+            <div class="color" style="background-color: #00ffff" data-color="#00ffff" title="Cyan"></div>
+            <div class="color" style="background-color: #00bfff" data-color="#00bfff" title="Biru Langit"></div>
+            <div class="color" style="background-color: #3366ff" data-color="#3366ff" title="Biru"></div>
+            <div class="color" style="background-color: #0000ff" data-color="#0000ff" title="Biru Tua"></div>
+            <div class="color" style="background-color: #9933ff" data-color="#9933ff" title="Ungu"></div>
+            <div class="color" style="background-color: #8a2be2" data-color="#8a2be2" title="Ungu Muda"></div>
+            <div class="color" style="background-color: #ff66cc" data-color="#ff66cc" title="Pink"></div>
+            <div class="color" style="background-color: #ff1493" data-color="#ff1493" title="Pink Tua"></div>
+            <div class="color" style="background-color: #ff6347" data-color="#ff6347" title="Salmon"></div>
+            <div class="color" style="background-color: #ff8c00" data-color="#ff8c00" title="Oranye Gelap"></div>
+            <div class="color" style="background-color: #663300" data-color="#663300" title="Coklat"></div>
+            <div class="color" style="background-color: #a0522d" data-color="#a0522d" title="Coklat Muda"></div>
+            <div class="color" style="background-color: #000000" data-color="#000000" title="Hitam"></div>
+            <div class="color" style="background-color: #808080" data-color="#808080" title="Abu-abu"></div>
+            <div class="color" style="background-color: #c0c0c0" data-color="#c0c0c0" title="Perak"></div>
+            <div class="color" style="background-color: #ffffff" data-color="#ffffff" title="Putih"></div>
+            <div class="color" style="background-color: #ffc0cb" data-color="#ffc0cb" title="Pink Muda"></div>
+            <div class="color" style="background-color: #ffb6c1" data-color="#ffb6c1" title="Pink Pastel"></div>
+            <div class="color" style="background-color: #ff69b4" data-color="#ff69b4" title="Pink Hot"></div>
+            <div class="color" style="background-color: #db7093" data-color="#db7093" title="Pink Ungu"></div>
+            <div class="color" style="background-color: #ffa07a" data-color="#ffa07a" title="Salmon Muda"></div>
+            <div class="color" style="background-color: #fa8072" data-color="#fa8072" title="Salmon"></div>
+            <div class="color" style="background-color: #e9967a" data-color="#e9967a" title="Salmon Gelap"></div>
+            <div class="color" style="background-color: #f08080" data-color="#f08080" title="Merah Muda"></div>
+            <div class="color" style="background-color: #cd5c5c" data-color="#cd5c5c" title="Merah Bata"></div>
+            <div class="color" style="background-color: #dc143c" data-color="#dc143c" title="Merah Crimson"></div>
+            <div class="color" style="background-color: #b22222" data-color="#b22222" title="Merah Api"></div>
+            <div class="color" style="background-color: #8b0000" data-color="#8b0000" title="Merah Marun"></div>
+            <div class="color" style="background-color: #ff7f50" data-color="#ff7f50" title="Coral"></div>
+            <div class="color" style="background-color: #ff4500" data-color="#ff4500" title="Merah Oranye"></div>
+            <div class="color" style="background-color: #ff8c00" data-color="#ff8c00" title="Oranye Gelap"></div>
+            <div class="color" style="background-color: #ffa500" data-color="#ffa500" title="Oranye"></div>
+            <div class="color" style="background-color: #ffd700" data-color="#ffd700" title="Kuning Emas"></div>
+            <div class="color" style="background-color: #ffff00" data-color="#ffff00" title="Kuning"></div>
+            <div class="color" style="background-color: #ffffe0" data-color="#ffffe0" title="Kuning Muda"></div>
+            <div class="color" style="background-color: #fffacd" data-color="#fffacd" title="Lemon Chiffon"></div>
+            <div class="color" style="background-color: #fafad2" data-color="#fafad2" title="Kuning Light"></div>
+            <div class="color" style="background-color: #eee8aa" data-color="#eee8aa" title="Kuning Pucat"></div>
+            <div class="color" style="background-color: #9acd32" data-color="#9acd32" title="Kuning Hijau"></div>
+            <div class="color" style="background-color: #adff2f" data-color="#adff2f" title="Hijau Kuning"></div>
+            <div class="color" style="background-color: #7fff00" data-color="#7fff00" title="Chartreuse"></div>
+            <div class="color" style="background-color: #7cfc00" data-color="#7cfc00" title="Hijau Rumput"></div>
+            <div class="color" style="background-color: #00ff00" data-color="#00ff00" title="Hijau Lime"></div>
+            <div class="color" style="background-color: #32cd32" data-color="#32cd32" title="Hijau Lime Gelap"></div>
+            <div class="color" style="background-color: #98fb98" data-color="#98fb98" title="Hijau Pastel"></div>
+            <div class="color" style="background-color: #90ee90" data-color="#90ee90" title="Hijau Light"></div>
+            <div class="color" style="background-color: #00fa9a" data-color="#00fa9a" title="Hijau Medium"></div>
+            <div class="color" style="background-color: #00ff7f" data-color="#00ff7f" title="Hijau Spring"></div>
+            <div class="color" style="background-color: #3cb371" data-color="#3cb371" title="Hijau Medium"></div>
+            <div class="color" style="background-color: #2e8b57" data-color="#2e8b57" title="Hijau Laut"></div>
+            <div class="color" style="background-color: #228b22" data-color="#228b22" title="Hijau Hutan"></div>
+            <div class="color" style="background-color: #008000" data-color="#008000" title="Hijau Gelap"></div>
+            <div class="color" style="background-color: #006400" data-color="#006400" title="Hijau Dark"></div>
+            <div class="color" style="background-color: #66cdaa" data-color="#66cdaa" title="Aquamarine"></div>
+            <div class="color" style="background-color: #40e0d0" data-color="#40e0d0" title="Turquoise"></div>
+            <div class="color" style="background-color: #48d1cc" data-color="#48d1cc" title="Turquoise Medium"></div>
+            <div class="color" style="background-color: #20b2aa" data-color="#20b2aa" title="Turquoise Light"></div>
+            <div class="color" style="background-color: #008b8b" data-color="#008b8b" title="Cyan Gelap"></div>
+            <div class="color" style="background-color: #008080" data-color="#008080" title="Teal"></div>
+            <div class="color" style="background-color: #00ffff" data-color="#00ffff" title="Cyan"></div>
+            <div class="color" style="background-color: #e0ffff" data-color="#e0ffff" title="Cyan Light"></div>
+            <div class="color" style="background-color: #afeeee" data-color="#afeeee" title="Cyan Pale"></div>
+            <div class="color" style="background-color: #7fffd4" data-color="#7fffd4" title="Aquamarine"></div>
+            <div class="color" style="background-color: #b0e0e6" data-color="#b0e0e6" title="Biru Powder"></div>
+            <div class="color" style="background-color: #add8e6" data-color="#add8e6" title="Biru Light"></div>
+            <div class="color" style="background-color: #87ceeb" data-color="#87ceeb" title="Biru Langit"></div>
+            <div class="color" style="background-color: #87cefa" data-color="#87cefa" title="Biru Langit Light"></div>
+            <div class="color" style="background-color: #00bfff" data-color="#00bfff" title="Biru Deep Sky"></div>
+            <div class="color" style="background-color: #1e90ff" data-color="#1e90ff" title="Biru Dodger"></div>
+            <div class="color" style="background-color: #6495ed" data-color="#6495ed" title="Biru Cornflower"></div>
+            <div class="color" style="background-color: #4682b4" data-color="#4682b4" title="Biru Steel"></div>
+            <div class="color" style="background-color: #4169e1" data-color="#4169e1" title="Biru Royal"></div>
+            <div class="color" style="background-color: #0000ff" data-color="#0000ff" title="Biru"></div>
+            <div class="color" style="background-color: #0000cd" data-color="#0000cd" title="Biru Medium"></div>
+            <div class="color" style="background-color: #00008b" data-color="#00008b" title="Biru Dark"></div>
+            <div class="color" style="background-color: #000080" data-color="#000080" title="Biru Navy"></div>
+            <div class="color" style="background-color: #191970" data-color="#191970" title="Biru Midnight"></div>
+            <div class="color" style="background-color: #6a5acd" data-color="#6a5acd" title="Slate Blue"></div>
+            <div class="color" style="background-color: #483d8b" data-color="#483d8b" title="Biru Dark Slate"></div>
+            <div class="color" style="background-color: #7b68ee" data-color="#7b68ee" title="Biru Medium Slate"></div>
+            <div class="color" style="background-color: #9370db" data-color="#9370db" title="Ungu Medium"></div>
+            <div class="color" style="background-color: #8a2be2" data-color="#8a2be2" title="Ungu Blue Violet"></div>
+            <div class="color" style="background-color: #9400d3" data-color="#9400d3" title="Ungu Dark Violet"></div>
+            <div class="color" style="background-color: #9932cc" data-color="#9932cc" title="Ungu Dark Orchid"></div>
+            <div class="color" style="background-color: #ba55d3" data-color="#ba55d3" title="Ungu Medium Orchid"></div>
+            <div class="color" style="background-color: #800080" data-color="#800080" title="Ungu"></div>
+            <div class="color" style="background-color: #d8bfd8" data-color="#d8bfd8" title="Ungu Thistle"></div>
+            <div class="color" style="background-color: #dda0dd" data-color="#dda0dd" title="Ungu Plum"></div>
+            <div class="color" style="background-color: #ee82ee" data-color="#ee82ee" title="Ungu Violet"></div>
+            <div class="color" style="background-color: #da70d6" data-color="#da70d6" title="Ungu Orchid"></div>
+            <div class="color" style="background-color: #ff00ff" data-color="#ff00ff" title="Magenta"></div>
+            <div class="color" style="background-color: #ff00ff" data-color="#ff00ff" title="Fuchsia"></div>
+            <div class="color" style="background-color: #c71585" data-color="#c71585" title="Ungu Medium Violet"></div>
+            <div class="color" style="background-color: #db7093" data-color="#db7093" title="Ungu Pale Violet"></div>
+            <div class="color" style="background-color: #ff1493" data-color="#ff1493" title="Pink Deep"></div>
+            <div class="color" style="background-color: #ff69b4" data-color="#ff69b4" title="Pink Hot"></div>
+            <div class="color" style="background-color: #ffb6c1" data-color="#ffb6c1" title="Pink Light"></div>
+            <div class="color" style="background-color: #ffc0cb" data-color="#ffc0cb" title="Pink"></div>
+            <div class="color" style="background-color: #fff0f5" data-color="#fff0f5" title="Lavender Blush"></div>
+            <div class="color" style="background-color: #ffe4e1" data-color="#ffe4e1" title="Misty Rose"></div>
+            <div class="color" style="background-color: #faebd7" data-color="#faebd7" title="Antique White"></div>
+            <div class="color" style="background-color: #f5f5dc" data-color="#f5f5dc" title="Beige"></div>
+            <div class="color" style="background-color: #f5deb3" data-color="#f5deb3" title="Wheat"></div>
+            <div class="color" style="background-color: #f4a460" data-color="#f4a460" title="Sandy Brown"></div>
+            <div class="color" style="background-color: #d2b48c" data-color="#d2b48c" title="Tan"></div>
+            <div class="color" style="background-color: #deb887" data-color="#deb887" title="Burly Wood"></div>
+            <div class="color" style="background-color: #cd853f" data-color="#cd853f" title="Peru"></div>
+            <div class="color" style="background-color: #d2691e" data-color="#d2691e" title="Coklat Chocolate"></div>
+            <div class="color" style="background-color: #b8860b" data-color="#b8860b" title="Dark Goldenrod"></div>
+            <div class="color" style="background-color: #daa520" data-color="#daa520" title="Goldenrod"></div>
+            <div class="color" style="background-color: #f0e68c" data-color="#f0e68c" title="Khaki"></div>
+            <div class="color" style="background-color: #bdb76b" data-color="#bdb76b" title="Dark Khaki"></div>
+            <div class="color" style="background-color: #556b2f" data-color="#556b2f" title="Dark Olive Green"></div>
+            <div class="color" style="background-color: #6b8e23" data-color="#6b8e23" title="Olive Drab"></div>
+            <div class="color" style="background-color: #808000" data-color="#808000" title="Olive"></div>
+            <div class="color" style="background-color: #a9a9a9" data-color="#a9a9a9" title="Dark Gray"></div>
+            <div class="color" style="background-color: #696969" data-color="#696969" title="Dim Gray"></div>
+            <div class="color" style="background-color: #778899" data-color="#778899" title="Light Slate Gray"></div>
+            <div class="color" style="background-color: #708090" data-color="#708090" title="Slate Gray"></div>
+            <div class="color" style="background-color: #2f4f4f" data-color="#2f4f4f" title="Dark Slate Gray"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tool-panel">
+        <div class="panel-title">Ukuran Kuas</div>
+        <div class="brush-sizes">
+          <div class="brush-size" data-size="2">2px</div>
+          <div class="brush-size" data-size="5">5px</div>
+          <div class="brush-size" data-size="10">10px</div>
+          <div class="brush-size" data-size="15">15px</div>
+          <div class="brush-size" data-size="20">20px</div>
+          <div class="brush-size" data-size="30">30px</div>
+        </div>
+      </div>
+      
+      <div class="tool-panel">
+        <div class="panel-title">Alat</div>
+        <div class="eraser" id="eraserBtn">
+          <span>Penghapus</span>
+        </div>
+        <div class="controls1">
+          <button id="clearBtn">
+            <span>Hapus Semua</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="panel-title">Pilih Gambar</div>
+    <div class="coloring-area">
+      <div class="coloring-item" data-image="gambar1">
+        <img src="Gallery/warna1.jpg" alt="Gambar 1 untuk mewarnai">
+      </div>
+      <div class="coloring-item" data-image="gambar2">
+        <img src="Gallery/warna2.jpg" alt="Gambar 2 untuk mewarnai">
+      </div>
+      <div class="coloring-item" data-image="gambar3">
+        <img src="Gallery/warna3.jpg" alt="Gambar 3 untuk mewarnai">
+      </div>
+      <div class="coloring-item" data-image="gambar1">
+        <img src="Gallery/warna4.jpg" alt="Gambar 4 untuk mewarnai">
+      </div>
+      <div class="coloring-item" data-image="gambar2">
+        <img src="Gallery/warna5.jpg" alt="Gambar 5 untuk mewarnai">
+      </div>
+      <div class="coloring-item" data-image="gambar3">
+        <img src="Gallery/warna6.jpg" alt="Gambar 6 untuk mewarnai">
+      </div>
+    </div>
+    
+    <div class="canvas-container" id="canvasContainer">
+      <canvas id="coloringCanvas" width="600" height="400"></canvas>
+    </div>
+    <br>
+    <br>
+    
+
+    
+    <div class="active-tool" id="activeToolIndicator">
+      <div class="tool-indicator" id="currentColorIndicator" style="background-color: #000000"></div>
+      <div class="size-indicator" id="currentSizeIndicator">10px</div>
+    </div>
+  </div>
+  
+  <script src="java/game-mewarnai.js"></script>
+</body>
+</html>

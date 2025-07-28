@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menembak Balon - 20 Level</title>
+    <link rel="stylesheet" href="css/game-ballon.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Gallery/balloons.png">
+</head>
+<body>
+    <div class="game-container" id="gameContainer">
+        <div class="cloud" style="width: 100px; height: 40px; top: 20%; animation-duration: 25s;"></div>
+        <div class="cloud" style="width: 80px; height: 30px; top: 60%; animation-duration: 30s; animation-delay: -10s;"></div>
+        
+        <div class="game-ui">
+            <div class="score">Skor: <span id="score">0</span></div>
+            <div class="level">Level: <span id="currentLevel">1</span>/20</div>
+            <div class="target">Target: <span id="currentTarget">0</span>/<span id="targetScore">50</span></div>
+            <div class="time">Waktu: <span id="time">45</span>s</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="combo-indicator" id="comboIndicator">Combo x<span id="comboCount">0</span>!</div>
+        <div class="crosshair" id="crosshair"></div>
+        <div class="start-screen" id="startScreen">
+            <h1>🎈 Game Menembak Balon 🎈</h1>
+            <div class="level-info">
+                <h3>20 Level Menantang:</h3>
+                <ul>
+                    <li><strong>Level 1-4:</strong> Balon normal (10 poin)</li>
+                    <li><strong>Level 5-8:</strong> + Balon cepat (15 poin)</li>
+                    <li><strong>Level 9-12:</strong> + Balon bonus (25 poin) & mini (20 poin)</li>
+                    <li><strong>Level 13-16:</strong> + Balon raksasa (50 poin)</li>
+                    <li><strong>Level 17-20:</strong> + Balon ledak (35 poin), Balon bergerak</li>
+                </ul>
+                <p style="margin-top: 15px; color: #666;"><strong>Bonus:</strong> Combo berturut-turut memberikan multiplier!</p>
+                <div class="warning">⚠️ HATI-HATI: Jangan klik burung! Poin akan berkurang -25!</div>
+            </div>
+            <button class="start-btn" onclick="startGame()">Mulai Permainan</button>
+        </div>
+
+        <div class="level-complete" id="levelComplete">
+            <h2>🎉 Level Selesai! 🎉</h2>
+            <div class="level-score">Skor Level: <span id="levelScore">0</span></div>
+            <div style="margin: 20px 0;">
+                <p>Target: <span id="completedTarget">0</span> ✓</p>
+                <p>Waktu Bonus: +<span id="timeBonus">0</span> poin</p>
+            </div>
+            <button class="next-level-btn" onclick="nextLevel()">Level Berikutnya</button>
+            <button class="restart-btn" onclick="restartGame()">Mulai Ulang</button>
+        </div>
+
+        <div class="game-complete" id="gameComplete">
+            <h2>🏆 SELAMAT! GAME SELESAI! 🏆</h2>
+            <div class="final-score">Skor Total: <span id="finalTotalScore">0</span></div>
+            <div style="margin: 20px 0;">
+                <p>🎉 Anda telah menyelesaikan semua 20 level!</p>
+                <p>🌟 Anda adalah Master Penembak Balon!</p>
+            </div>
+            <button class="restart-btn" onclick="restartGame()">Main Lagi</button>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2>💥 Game Over! 💥</h2>
+            <div class="final-score">Skor Akhir: <span id="finalScore">0</span></div>
+            <div style="margin: 20px 0;">
+                <p>Level Tercapai: <span id="highestLevel">1</span>/20</p>
+                <p>Target Terlewat: <span id="missedTarget">0</span></p>
+            </div>
+            <button class="restart-btn" onclick="restartGame()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="java/game-ballon.js"></script>
+</body>
+</html>

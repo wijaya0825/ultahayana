@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<title>Pesta Ulang Tahun 29 Juli 2025</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="icon" type="image/png" sizes="16x16" href="Gallery/birthday_16104666.gif">
+</head>
+<body>
+
+<header>
+  <h1>🎉 Selamat Ulang Tahun 🎉</h1>
+</header>
+
+<div class="container">
+
+        <div id="home" class="section active">
+            <div class="home">
+                <h2>Selamat Datang di Pesta Ulang Tahun!</h2>
+                <div class="hero-image">
+                    <img src="Gallery/Ungu Meriah Ucapan Selamat Ulang Tahun Teman.png" alt="Banner Ulang Tahun">
+                </div>
+                
+                <div class="countdown">
+                    <div id="countdown">Menuju 29 Juli 2025: <span id="timer"></span></div>
+                </div>
+                
+                <p class="invitation-text">
+                    Yuk, rayakan hari ulang tahun yang penuh kebahagiaan ini bersama! Temukan berbagai keseruan yang sudah dipersiapkan spesial untukmu.
+                    Abadikan momen indah di galeri, mainkan game seru, dan baca pesan-pesan hangat dari orang-orang tercinta. Semoga harimu dipenuhi tawa, cinta, dan kenangan tak terlupakan!
+                </p>
+                <br>
+                
+                <div class="games-grid">
+                    <div class="game-card" onclick="window.location.href='ucapan.html'">
+                        <span class="game-icon">💌</span>
+                        <h3 class="game-title">Ucapan</h3>
+                        <p class="game-description">Lihat ucapan spesial dan harapan indah di hari ulang tahun</p>
+                        <button class="play-button">Masuk</button>
+                    </div>
+            
+                    <div class="game-card" onclick="window.location.href='gallery.html'">
+                        <span class="game-icon">🖼️</span>
+                        <h3 class="game-title">Gallery</h3>
+                        <p class="game-description">Lihat kumpulan foto dan kenangan indah yang tak terlupakan.</p>
+                        <button class="play-button">Masuk</button>
+                    </div>
+            
+                    <div class="game-card" onclick="window.location.href='games.html'">
+                        <span class="game-icon">🎮</span>
+                        <h3 class="game-title">Memory Game</h3>
+                        <p class="game-description">Mainkan game seru dan dapatkan kesenangan di hari spesial</p>
+                        <button class="play-button">Masuk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bg-music" src="song/Selamat Ulang Tahun Ayana (1).mp3" loop autoplay></audio>
+    <div id="music-controls" style="position:fixed;bottom:20px;right:20px;z-index:1000;background:rgba(255,255,255,0.8);border-radius:8px;padding:8px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;align-items:center;gap:10px;">
+        <button id="music-toggle" style="font-size:18px;">⏸️</button>
+        <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.5" style="width:80px;">
+    </div>
+
+    <script src="java/song.js"></script>
+    <script src="java/index.js"></script>
+    <script src="java/games.js"></script>
+</div>
+
+
+</body>
+</html>

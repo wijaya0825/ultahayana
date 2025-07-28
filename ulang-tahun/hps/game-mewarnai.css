@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffccd5, #ffd6a5);
+}
+
+h1 {
+  text-align: center;
+  color: #ff4081;
+}
+
+.game-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+button, input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+canvas {
+  border: 5px dashed #ff4081;
+  border-radius: 15px;
+  background: white;
+  max-width: 100%;
+  height: auto;
+}
+
+.shape-picker {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.shape-picker button {
+  font-size: 1.2em;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #ffcc00;
+  box-shadow: 0 4px 0 #cc9900;
+  transition: transform 0.1s;
+}
+
+.shape-picker button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
